@@ -1,6 +1,6 @@
-package lk.ijse.dep11.dep11.to.request;
+package lk.ijse.dep11.edupanal.to.request;
 
-import lk.ijse.dep11.dep11.validation.LecturerImage;
+import lk.ijse.dep11.edupanal.validation.LecturerImage;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -27,7 +27,8 @@ public class LecturerReqTO {
     @NotBlank(message = "Type can't be empty")
     @Pattern(regexp = "^(full-time|part-time)$", flags = Pattern.Flag.CASE_INSENSITIVE, message = "Invalid picture")
     private String type;
-    @LecturerImage MultipartFile picture;
+    @LecturerImage
+    MultipartFile picture;
     @Pattern(regexp = "^http[s]?://.+$", message = "Invalid linkedin url")
     private String linkedin;
 }

@@ -1,10 +1,9 @@
-package lk.ijse.dep11.dep11.validation;
+package lk.ijse.dep11.edupanal.validation;
 
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
-import javax.xml.validation.Validator;
 
 public class LecturerImageValidator implements ConstraintValidator<LecturerImage, MultipartFile> {
 
