@@ -18,6 +18,8 @@ public class LecturerImageValidator implements ConstraintValidator<LecturerImage
     public boolean isValid(MultipartFile multipartFile, ConstraintValidatorContext constraintValidatorContext) {
         if (multipartFile == null || multipartFile.isEmpty()) return true;
         if (multipartFile.getSize() > maximumFileSize) return false;
+        if (multipartFile.getContentType() == null) return false;
+        if (!multipartFile.getContentType().startsWith("image/")) return false;
         return true;
     }
 }
